@@ -103,7 +103,7 @@
 							"} \r",
 							"// If number of post tests is reached, continue testing onward\r",
 							"else {\r",
-							"    postman.setNextRequest(\"Get all books with optional filters\")\r",
+							"    postman.setNextRequest(\"Get all books with optional filter\")\r",
 							"}"
 						],
 						"type": "text/javascript"
@@ -199,7 +199,7 @@
 							"} \r",
 							"// If number of post tests is reached, continue testing onward\r",
 							"else {\r",
-							"    postman.setNextRequest(\"Delete tests\")\r",
+							"    postman.setNextRequest(\"Delete a book\")\r",
 							"}"
 						],
 						"type": "text/javascript"
@@ -283,7 +283,7 @@
 							"} \r",
 							"// If number of delete tests is reached, continue testing onward\r",
 							"else {\r",
-							"    postman.setNextRequest(\"Get all books\")\r",
+							"    postman.setNextRequest(\"Get all books after delete\")\r",
 							"}"
 						],
 						"type": "text/javascript"
@@ -394,49 +394,6 @@
 					"raw": "{{currentRequestUrl}}",
 					"host": [
 						"{{currentRequestUrl}}"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get all books - NO TEST",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"if(pm.response.code == 200) \r",
-							"{\r",
-							"    pm.expect.fail(\"code is 200\")\r",
-							"    return\r",
-							"}\r",
-							"\r",
-							"console.log(\"this should not print\")"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{baseUrl}}/books",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"books"
 					]
 				}
 			},
