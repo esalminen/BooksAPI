@@ -23,7 +23,7 @@ Tools required to build and run the project:
 ## Usage
 
 API documentation is available at ```http://localhost:9000/swagger/index.html``` 
-when the API is running.
+when the API is running. API can be also tested from the Swagger UI.
 
 (Optional) Postman test sequence can be run with Collection runner. Scripts
 handle database initialization and test sequence execution.
